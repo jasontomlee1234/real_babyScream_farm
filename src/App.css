@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+body {
+  background: black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +37,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: 'AUTOMANI';
+  src: local('AUTOMANI'), url(./font/AUTOMANI.TTF) format('opentype');
+}
+
+@font-face {
+  font-family: 'Codystar';
+  src: local('Codystar'), url(./font/Codystar-Regular.ttf) format('opentype');
+}
+
+* {
+  font-family: Codystar;
+  text-shadow: 7px 4px 5px cyan;
+  color: cyan;
+  font-weight: 600;
 }
