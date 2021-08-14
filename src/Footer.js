@@ -18,6 +18,10 @@ function Footer() {
             <div>
                 This project is in a super-duper early experimental stage. Using smart contract is always a risk. DYOR and use this at your own risk.
             </div>
+            <br/>
+            <div>
+                All pools have 1% tax fee for buyback and burn.
+            </div>
         </StyledDiv>
     )
 }

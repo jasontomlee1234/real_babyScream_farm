@@ -103,8 +103,8 @@ function getPoolInfo(contract, pid) {
     }).catch(e => console.log)
 }
 
-function getPendingReward(contract, user) {
-    return contract.pendingwoo(0, user).then(rst => {
+function getPendingReward(contract,pid, user) {
+    return contract.pendingwoo(pid, user).then(rst => {
         return rst
     }).catch(e => console.log)
 }
@@ -164,7 +164,7 @@ function FarmCard(props) {
     useInterval(async()=>{
         const _contract = getContract(props.address, abi, library ? library.getSigner(account).connectUnchecked() : library)
         setContract(_contract)
-        const _pendingReward = await getPendingReward(_contract, account)
+        const _pendingReward = await getPendingReward(_contract, props.pid,account)
         SetPendingReward(_pendingReward)
 
         const _userInfo = await getUserInfo(_contract,props.pid, account)
@@ -218,7 +218,6 @@ function FarmCard(props) {
                 </div>
                 </StyledSpacedRow>
             <StyledSpacedRow>
-            <div>deposit: {staked ? formatEther(staked.toString()) : 0}</div>
             <StyledRow>
                 <div>earned: {pendingReward ? formatEther(pendingReward.toString()) : 0}</div>
                 <div>
@@ -231,7 +230,9 @@ function FarmCard(props) {
             <StyledSpacedRow>
             <div>
                 <div>Deposit: </div>
-                <div>balance: {account ? formatEther(lpBalance.toString()) : 0}</div>
+                <div onClick={()=>{
+                    setDepositAmount(formatEther(lpBalance))
+                }}>balance: {account ? formatEther(lpBalance.toString()) : 0}</div>
                 <StyledRow>
                     <div>
                         <StyledInput disabled={account ? false : true} type="number" value={depositAmount} onChange={handleDepositChange}></StyledInput>
@@ -249,6 +250,9 @@ function FarmCard(props) {
             </div>
             </StyledSpacedRow>
             <div>Withdraw: </div>
+            <div onClick={()=>{
+                    setWithdrawAmount(formatEther(staked))
+                }}>Staked: {staked ? formatEther(staked.toString()) : 0}</div>
             <StyledRow>
                 <StyledInput disabled={account ? false : true} type="number" value={withdrawAmount} onChange={handleWithdrawChange}></StyledInput>
                 <StyledButton onClick={() => {
