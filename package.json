@@ -2,6 +2,7 @@
   "name": "farm-front",
   "version": "0.1.0",
   "private": true,
+  "homepage":"./",
   "dependencies": {
     "@ethersproject/contracts": "^5.4.1",
     "@ethersproject/providers": "^5.4.3",
