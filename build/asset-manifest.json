@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eea4a211.chunk.css",
+    "main.js": "/static/js/main.c6ba679f.chunk.js",
+    "main.js.map": "/static/js/main.c6ba679f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.163e6074.js",
+    "runtime-main.js.map": "/static/js/runtime-main.163e6074.js.map",
+    "static/js/2.5a7cfafb.chunk.js": "/static/js/2.5a7cfafb.chunk.js",
+    "static/js/2.5a7cfafb.chunk.js.map": "/static/js/2.5a7cfafb.chunk.js.map",
+    "static/js/3.72841d91.chunk.js": "/static/js/3.72841d91.chunk.js",
+    "static/js/3.72841d91.chunk.js.map": "/static/js/3.72841d91.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.eea4a211.chunk.css.map": "/static/css/main.eea4a211.chunk.css.map",
+    "static/js/2.5a7cfafb.chunk.js.LICENSE.txt": "/static/js/2.5a7cfafb.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/Codystar-Regular.070f6213.ttf",
+    "static/media/logo.9653be24.png": "/static/media/logo.9653be24.png",
+    "static/media/neon-footer.26bf6601.png": "/static/media/neon-footer.26bf6601.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.163e6074.js",
+    "static/js/2.5a7cfafb.chunk.js",
+    "static/css/main.eea4a211.chunk.css",
+    "static/js/main.c6ba679f.chunk.js"
+  ]
+}
