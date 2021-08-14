@@ -91,8 +91,8 @@ function getContract(address, abi, library) {
     return new Contract(address, abi, library)
 }
 
-function getUserInfo(contract, user) {
-    return contract.userInfo(0, user).then(rst => {
+function getUserInfo(contract,pid, user) {
+    return contract.userInfo(pid, user).then(rst => {
         return rst
     }).catch(e => console.log)
 }
@@ -167,7 +167,8 @@ function FarmCard(props) {
         const _pendingReward = await getPendingReward(_contract, account)
         SetPendingReward(_pendingReward)
 
-        const _userInfo = await getUserInfo(_contract, account)
+        const _userInfo = await getUserInfo(_contract,props.pid, account)
+        console.log(_contract)
         setStaked(_userInfo['amount'])
 
         const _poolInfo = await getPoolInfo(_contract, props.pid)

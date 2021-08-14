@@ -83,12 +83,12 @@ function NavBar(props) {
     return (
         <StyledDiv>
             <StyledImg src={logo}></StyledImg>
-            {wooBalance ? <StyledBalance>
-                {"$Woo balance: " + formatEther(wooBalance.toString())}
-            </StyledBalance> : ""}
             <StyledButton onClick={() => { account ? deactivate() : activate(injected) }}>{
                 account ? account.slice(0, 6) + "..." : "Connect"
             }</StyledButton>
+            {wooBalance ? <StyledBalance>
+                {"$Woo balance: " + formatEther(wooBalance.toString())}
+            </StyledBalance> : ""}
         </StyledDiv>
     )
 }
